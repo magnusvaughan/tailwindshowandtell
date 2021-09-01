@@ -56,9 +56,10 @@ export default function Example() {
   ];
 
   return (
-    <div className="grid lg:grid-cols-2 2xl:grid-cols-5">
-      <div
-        className="
+    <div>
+      <div className="grid lg:grid-cols-2 2xl:grid-cols-5">
+        <div
+          className="
           px-8
           py-12
           max-w-md
@@ -68,11 +69,11 @@ export default function Example() {
           xl:mr-0
           2xl:col-span-2
         "
-      >
-        <div className="xl:max-w-xl">
-          <img className="h-10" src={workcation} alt="workcation" />
-          <img
-            className="
+        >
+          <div className="xl:max-w-xl">
+            <img className="h-10" src={workcation} alt="workcation" />
+            <img
+              className="
               mt-6
               rounded-lg
               shadow-xl
@@ -80,11 +81,11 @@ export default function Example() {
               object-center
               lg:hidden
             "
-            src={beach}
-            alt="beach"
-          />
-          <h1
-            className="
+              src={beach}
+              alt="beach"
+            />
+            <h1
+              className="
               mt-6
               text-2xl
               font-bold
@@ -93,19 +94,19 @@ export default function Example() {
               lg:text-3xl
               xl:text-4xl
             "
-          >
-            You can work from anywhere.
-            <br className="" />
-            <span className="text-indigo-500">Take advantage of it.</span>
-          </h1>
-          <p className="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
-            Workcation helps you find work-friendly rentals in beautiful
-            locations so you can enjoy some nice weather even when you’re not on
-            vacation.
-          </p>
-          <div className="mt-4">
-            <a
-              className="
+            >
+              You can work from anywhere.
+              <br className="" />
+              <span className="text-indigo-500">Take advantage of it.</span>
+            </h1>
+            <p className="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
+              Workcation helps you find work-friendly rentals in beautiful
+              locations so you can enjoy some nice weather even when you’re not
+              on vacation.
+            </p>
+            <div className="mt-4">
+              <a
+                className="
                 inline-block
                 transform
                 transition
@@ -128,24 +129,31 @@ export default function Example() {
                 text-sm
                 sm:mt-6 sm:text-base
               "
-              href="/"
-            >
-              Book your escape
-            </a>
+                href="/"
+              >
+                Book your escape
+              </a>
+            </div>
           </div>
         </div>
+        <div className="hidden relative lg:block 2xl:col-span-3">
+          <img
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            src={beach}
+            alt="beach"
+          />
+        </div>
       </div>
-      <div className="hidden relative lg:block 2xl:col-span-3">
-        <img
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          src={beach}
-          alt="beach"
-        />
-      </div>
-      <div>
-        {popularDestinations.map((destination) => (
-          <DestinationCard key={destination.city} {...destination} />
-        ))}
+      <div className="max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-8 lg:px-12 py-8">
+        <h2 className="text-xl text-gray-900">Popular Destinations</h2>
+        <p className="text-gray-600">
+          A selection of great work-friendly cities{" "}
+        </p>
+        <div className="flex flex-wrap -mx-4">
+          {popularDestinations.map((destination) => (
+            <DestinationCard key={destination.city} {...destination} />
+          ))}
+        </div>
       </div>
     </div>
   );
