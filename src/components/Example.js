@@ -1,6 +1,6 @@
 import React from "react";
-import beach from "./beach.jpg";
-import workcation from "./workcation.png";
+import beach from "../img/beach.jpg";
+import workcation from "../img/workcation.png";
 import DestinationCard from "./DestinationCard";
 
 export default function Example() {

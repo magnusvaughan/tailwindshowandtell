@@ -5,12 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        // brand: "#0fa9e6",
-        // brand: {
-        //   light: "#0fa9e6",
-        // },
-      },
+      // colors: {
+      //   brand: "#0fa9e6",
+      // },
       // fontFamily: {
       //   headline: "Tahoma",
       // },
